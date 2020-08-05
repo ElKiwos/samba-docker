@@ -1,0 +1,7 @@
+#!/bin/bash
+
+swupd bundle-add docker
+swupd bundle-add acl
+swupd bundle-add docker-compose
+
+systemctl enable docker.service
