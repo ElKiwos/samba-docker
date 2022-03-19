@@ -28,8 +28,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: "{{defaultContext}}:smb-ad-dc"
           push: true
           tags: elkiwi/samba-ad-dc:latest
           platforms: linux/arm64,linux/amd64
-          file: "smb-ad-dc/Dockerfile"
+          file: "Dockerfile"
