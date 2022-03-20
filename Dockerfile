@@ -31,5 +31,20 @@ RUN chmod +x /root/tools/*.sh
 
 LABEL org.label-schema.build-date=$build_date
 
+EXPOSE 53/tcp
+EXPOSE 53/udp
+EXPOSE 88/tcp
+EXPOSE 88/udp
+EXPOSE 135/tcp
+EXPOSE 137/tcp
+EXPOSE 138/udp
+EXPOSE 139/tcp
+EXPOSE 389/tcp
+EXPOSE 389/udp
+EXPOSE 445/tcp
+EXPOSE 464/tcp
+EXPOSE 464/udp
+
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["samba"]
