@@ -103,7 +103,7 @@ EOF
 	 # now join the domain
 	 if [ $RC -eq 0 ]; then
              echo -e "${GR} ************************************"
-             echo -e "${GR} JOINING DOMAIN ${SAMBA_DC_REALM} now" 
+             echo -e "${GR} JOINING DOMAIN ${SAMBA_DC_REALM} now"
              echo -e "${GR} ************************************"
 	     samba-tool domain join ${SAMBA_DC_REALM} DC -k yes
          fi
@@ -111,7 +111,7 @@ EOF
 
     if [ "${SAMBA_DNS_FORWARDER}" != "NONE" ]; then
         sed -i "/\[global\]/a \
-            \\\tdns forwarder = ${SAMBA_DNSFORWARDER}\
+            \\\tdns forwarder = ${SAMBA_DNS_FORWARDER}\
             " /etc/samba/smb.conf
     fi
 fi

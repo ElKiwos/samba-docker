@@ -14,4 +14,4 @@ docker build \
         --build-arg "version=$version" \
         --build-arg "build_date=$build_date" \
         -t $gituser/docker-samba-ad-dc:${samba_version} .
-docker tag $gituser/docker-samba-ad-dc:${samba_version} $gituser/docker-samba-ad-ac:latest
+docker tag $gituser/docker-samba-ad-dc:${samba_version} $gituser/docker-samba-ad-ac:"v1.0.0"

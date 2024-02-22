@@ -1,4 +1,4 @@
-FROM ubuntu:impish
+FROM ubuntu:noble
 
 ARG version
 ARG build_date
@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get clean && apt-get update && \
     apt-get install -y attr acl samba smbclient samba-vfs-modules winbind libnss-winbind libpam-winbind \
                        openssl
-RUN apt-get install -y ldap-utils ldb-tools cifs-utils smbldap-tools 
+RUN apt-get install -y ldap-utils ldb-tools cifs-utils smbldap-tools
 # tools for debugging
 RUN apt-get install -y vim bind9-host krb5-user iputils-ping iproute2
 RUN apt-get autoclean && \
