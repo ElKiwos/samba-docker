@@ -29,6 +29,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: elkiwi/samba-ad-dc:v1.0.0
+          tags: elkiwi/samba-ad-dc:v1.1.0
           platforms: linux/arm64,linux/amd64
           file: "Dockerfile"
